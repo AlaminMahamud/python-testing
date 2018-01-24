@@ -1,5 +1,15 @@
+# general imports
 from django.test import TestCase
+
+# import for model testing
 from .models import BucketList
+
+# import for serializers testing
+
+# import for viewset testing
+from rest_framework.test import APIClient
+from rest_framework import status
+from django.urls import reverse
 
 
 class TestBucketList(TestCase):
@@ -51,3 +61,42 @@ class TestBucketList(TestCase):
         self.bucketlist.save()
         new_count = BucketList.objects.count()
         self.assertNotEqual(old_count, new_count)
+
+
+class TestBucketListView(TestCase):
+    """
+    Test Suite for the api views
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        pass
+
+    @classmethod
+    def tearDownClass(cls):
+        pass
+
+    def setUp(self):
+        """
+        Define the test client and other test variables
+        """
+        self.client = APIClient()
+        self.bucketlist_data = {
+            'name': 'Goto Ibiza'
+        }
+        self.response = self.client.post(
+            reverse('create'),
+            self.bucketlist_data,
+            format='json'
+        )
+
+    def tearDown(self):
+        pass
+
+    def test_api_can_create_a_bucketlist(self):
+        """
+        """
+        self.assertEqual(
+            self.response.status_code,
+            status.HTTP_201_CREATED
+        )
