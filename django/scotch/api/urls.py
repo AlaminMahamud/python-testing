@@ -12,7 +12,7 @@ urlpatterns = [
         name='create'
     ),
     url(
-        r'bucketlist/(?<pk>[0-9]+)/$',
+        r'bucketlist/(?P<pk>[0-9]+)/$',
         DetailsView.as_view(),
         name='details'
     )
