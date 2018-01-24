@@ -1,0 +1,74 @@
+#+TITLE: Testing with python
+* Behavior Driven Development BDD
+#+begin_src shell
+pip install nose
+pip install pinocchio
+#+end_src
+
+#+begin_src python
+  class Test[the_thing_being_tested](TestCase):
+      def test_[the_behaviour_we_are_testing](self):
+          pass
+#+end_src
+
+#+begin_src python
+  from unittest import TestCase
+
+
+  class TestPostPublisher(TestCase):
+      """
+      Summary:
+      -------
+
+
+      Description:
+      ------------
+
+
+      Behaviours:
+      ------------
+      1. sets published at to given date
+      2. emits post_published event with post id
+      3. does nothing for published posts
+
+      """
+
+      def test_sets_published_at_to_given_date(self):
+          """
+          Summary:
+          ---------
+          sets published at to given date
+
+
+          Description:
+          ------------
+          extended summary
+
+          """
+          pass
+
+
+      def test_emits_post_published_event_with_post_id(self):
+          """
+          Summary:
+          --------
+
+
+          Description:
+          -----------
+
+          """
+          pass
+
+      def test_does_nothing_for_published_tests(self):
+          """
+          Summary:
+          --------
+
+
+          Description:
+          ------------
+
+          """
+          pass
+#+end_src
