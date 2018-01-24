@@ -32,43 +32,26 @@ pip install pinocchio
       3. does nothing for published posts
 
       """
+      
+    @classmethod
+    def setUpClass(cls):
+        pass
 
-      def test_sets_published_at_to_given_date(self):
-          """
-          Summary:
-          ---------
-          sets published at to given date
+    def setUp(self):
+        pass
 
+    @classmethod
+    def tearDownClass(cls):
+        pass
 
-          Description:
-          ------------
-          extended summary
+    def tearDown(self):
+        pass
+    
 
-          """
-          pass
-
-
-      def test_emits_post_published_event_with_post_id(self):
-          """
-          Summary:
-          --------
-
-
-          Description:
-          -----------
-
-          """
-          pass
-
-      def test_does_nothing_for_published_tests(self):
-          """
-          Summary:
-          --------
-
-
-          Description:
-          ------------
-
-          """
-          pass
 #+end_src
+* Django Rest Framework API Testing
+  Ref: [[https://realpython.com/blog/python/test-driven-development-of-a-django-restful-api/][Realpython]]
+
+
+
+   
