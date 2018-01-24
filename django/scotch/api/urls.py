@@ -1,5 +1,8 @@
 from django.conf.urls import url
-from .views import CreateView
+from .views import (
+    CreateView,
+    DetailsView
+)
 from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
@@ -7,6 +10,11 @@ urlpatterns = [
         r'^bucketlists/$',
         CreateView.as_view(),
         name='create'
+    ),
+    url(
+        r'bucketlist/(?<pk>[0-9]+)/$',
+        DetailsView.as_view(),
+        name='details'
     )
 ]
 
