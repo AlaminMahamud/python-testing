@@ -16,17 +16,15 @@ class TestBucketList(TestCase):
     """
     Summary:
     -------
-
+    testcases for BucketList Model
 
     Description:
     ------------
-
+    BucketList contains only name, created, and updated fields
 
     Behaviours:
     ------------
-    1. sets published at to given date
-    2. emits post_published event with post id
-    3. does nothing for published posts
+    1. BucketList can create a new list
 
     """
 
