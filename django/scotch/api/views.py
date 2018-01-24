@@ -11,6 +11,6 @@ class CreateView(generics.ListCreateAPIView):
         serializer.save()
 
 
-class DetailsView(generics.RertieveUpdateDestroyAPIView):
+class DetailsView(generics.RetrieveUpdateDestroyAPIView):
     queryset = BucketList.objects.all()
     serializer_class = BucketListSerializer
