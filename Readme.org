@@ -51,7 +51,17 @@ pip install pinocchio
 #+end_src
 * Django Rest Framework API Testing
   Ref: [[https://realpython.com/blog/python/test-driven-development-of-a-django-restful-api/][Realpython]]
+** Routing Endpoints
+    | Endpoint    | HTTP Method | CRUD Method | Result                |
+    |-------------+-------------+-------------+-----------------------|
+    | puppies     | GET         | READ        | get all puppies       |
+    | puppies/:id | GET         | READ        | get a single puppy    |
+    | puppies     | POST        | CREATE      | add a single puppy    |
+    | puppies/:id | PUT         | UPDATE      | update a single puppy |
+    | puppies/:id | DELETE      | DELETE      | delete a single puppy |
 
-
-
+   
+** Workflow
+   + add a unit test, just enough code to fail
+   + then update the code to make it pass the test
    
