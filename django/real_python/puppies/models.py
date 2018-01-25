@@ -10,11 +10,11 @@ class Puppy(models.Model):
     age = models.IntegerField()
     breed = models.CharField(max_length=255)
     color = models.CharField(max_length=255)
-    creaetd_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def get_breed(self):
-        return "{name} belongs to {breed} breed" \
+        return "{name} belongs to {breed} breed." \
             .format(
                 name=self.name,
                 breed=self.breed
