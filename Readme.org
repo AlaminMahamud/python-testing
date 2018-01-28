@@ -59,7 +59,6 @@ pip install pinocchio
     | puppies     | POST        | CREATE      | add a single puppy    |
     | puppies/:id | PUT         | UPDATE      | update a single puppy |
     | puppies/:id | DELETE      | DELETE      | delete a single puppy |
-
    
 ** Workflow
    + add a unit test, just enough code to fail
